@@ -11,5 +11,6 @@ steps:
   commands:
   - ls /
   - ls /opt
+  - . /opt/conda/etc/profile.d/conda.sh
   - conda info
   - whoami
