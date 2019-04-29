@@ -10,5 +10,6 @@ steps:
   image: condaforge/linux-anvil-aarch64
   commands:
   - ls /
+  - ls /opt
   - conda info
   - whoami
