@@ -7,9 +7,6 @@ platform:
 
 steps:
 - name: build
-  image: docker
+  image: condaforge/linux-anvil-aarch64 whoami
   commands:
-    - docker info
-    - docker run condaforge/linux-anvil-aarch64 whoami
-  volumes:
-    - /var/run/docker.sock:/var/run/docker.sock
+  - conda info
