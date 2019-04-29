@@ -7,9 +7,10 @@ platform:
 
 steps:
 - name: build
-  image: condaforge/linux-anvil-aarch64
+  image: docker:dind
   commands:
   - lscpu
   - uname -a
   - free -m
-  - whoami
+  - docker info
+  - docker run condaforge/linux-anvil-aarch64 whoami
