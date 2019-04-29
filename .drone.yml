@@ -7,9 +7,10 @@ platform:
 
 steps:
 - name: build
-  image: gcc
+  image: ubuntu-16.04
   commands:
   - lscpu
   - uname -a
   - free -m
   - docker info
+  - docker run condaforge/linux-anvil-aarch64 whoami
