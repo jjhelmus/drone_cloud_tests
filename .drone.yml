@@ -11,6 +11,7 @@ steps:
   commands:
   - lscpu
   - uname -a
+  - free -m
 
 ---
 kind: pipeline
@@ -26,6 +27,7 @@ steps:
   commands:
   - lscpu
   - uname -a
+  - free -m
 
 ---
 kind: pipeline
@@ -41,3 +43,4 @@ steps:
   commands:
   - lscpu
   - uname -a
+  - free -m
