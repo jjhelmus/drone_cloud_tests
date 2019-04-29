@@ -9,5 +9,6 @@ steps:
 - name: test
   image: condaforge/linux-anvil-aarch64
   commands:
+  - ls /
   - conda info
   - whoami
