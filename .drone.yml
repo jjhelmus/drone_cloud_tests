@@ -8,10 +8,7 @@ platform:
 steps:
 - name: test
   image: condaforge/linux-anvil-aarch64
-  privileged: true
   commands:
-  - ls /
-  - ls /opt
-  - . /opt/conda/etc/profile.d/conda.sh
+  - /opt/docker/bin/entrypoint /bin/bash
   - conda info
   - whoami
