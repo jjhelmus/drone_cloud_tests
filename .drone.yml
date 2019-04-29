@@ -6,8 +6,23 @@ platform:
   arch: arm64
 
 steps:
-- name: build
-  image: condaforge/linux-anvil-aarch64
+- name: test
+  image: docker:dind
+  volumes:
+  - name: dockersock
+    path: /var/run
   commands:
-  - conda info
-  - whoami
+  - sleep 5 # give docker enough time to start
+  - docker ps -a
+
+services:
+- name: docker
+  image: docker:dind
+  privileged: true
+  volumes:
+  - name: dockersock
+    path: /var/run
+
+volumes:
+- name: dockersock
+  temp: {}
