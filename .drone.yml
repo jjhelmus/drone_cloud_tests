@@ -7,7 +7,9 @@ platform:
 
 steps:
 - name: test
-  image: docker:dind
+  image: condaforge/linux-anvil-aarch64
   priviledged: true
   commands:
-  - docker info
+  - /opt/conda/bin/tini -- /opt/docker/bin/entrypoint /bin/bash
+  - conda info
+  - whoami
