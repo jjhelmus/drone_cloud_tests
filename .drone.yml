@@ -8,6 +8,7 @@ platform:
 steps:
 - name: test
   image: condaforge/linux-anvil-aarch64
+  privileged: true
   commands:
   - ls /
   - ls /opt
