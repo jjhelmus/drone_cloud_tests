@@ -9,5 +9,7 @@ steps:
 - name: build
   image: docker
   commands:
-  - docker info
-  - docker run condaforge/linux-anvil-aarch64 whoami
+    - docker info
+    - docker run condaforge/linux-anvil-aarch64 whoami
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
