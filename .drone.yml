@@ -9,6 +9,6 @@ steps:
 - name: test
   image: condaforge/linux-anvil-aarch64
   commands:
-  - /opt/docker/bin/entrypoint /bin/bash
+  - . /opt/docker/bin/entrypoint /bin/bash
   - conda info
   - whoami
