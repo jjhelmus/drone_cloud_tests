@@ -8,6 +8,7 @@ platform:
 steps:
 - name: test
   image: condaforge/linux-anvil-aarch64
+  priviledged: true
   commands:
   - /opt/conda/bin/tini -- /opt/docker/bin/entrypoint /bin/bash
   - conda info
