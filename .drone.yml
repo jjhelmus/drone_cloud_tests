@@ -7,6 +7,7 @@ platform:
 
 steps:
 - name: build
-  image: condaforge/linux-anvil-aarch64 whoami
+  image: condaforge/linux-anvil-aarch64
   commands:
   - conda info
+  - whoami
